@@ -10,7 +10,7 @@ buttonSounds.push(new Audio("sounds/red.mp3"));
 buttonSounds.push(new Audio("sounds/blue.mp3"));
 buttonSounds.push(new Audio("sounds/green.mp3"));
 buttonSounds.push(new Audio("sounds/yellow.mp3"));
-// buttonSounds.push(new Audio("sounds/wrong.mp3"));
+buttonSounds.push(new Audio("sounds/wrong.mp3"));
 
 /* register button that got clicked */
 
@@ -39,6 +39,7 @@ function checkAnswer(currlevel) {
         gamePattern = [];
         userClickedPattern = [];
         $("h1").text("Game Over, Press Any Key to Restart");
+        playSound(buttonSounds.length - 1);
         $("body").addClass("game-over");
         setTimeout(() => {
             $("body").removeClass("game-over");
